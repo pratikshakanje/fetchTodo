@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css" integrity="sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>TODO CRUD using fetch</title>
+    <style>
+        .spinner{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+        }
+    </style>
+
+</head>
+<body class="bg-info">
+    <h3 class="text-center text-white py-2 bg-dark">TODO Using Fetch</h3>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="text-center text-info"><u>TODO Form</u></h5>
+                        <form id="formTodo">
+                            <div class="form-group">
+                                <label for="todoitem">TODO:-</label>
+                                <input type="text" id="todoitem" class="form-control bg-light" placeholder="Enter todo item...">
+                            </div>
+                            <button type="submit" id="addTodo" class="btn btn-sm btn-block btn-info">Add TODO</button>
+                            <button type="button" id="updateTodo" class="btn btn-sm btn-block btn-success d-none">Update TODO</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card bg-dark">
+                    <div class="card-body">
+                        <h5 class="text-center text-info"><u>TODO List</u></h5>
+                        <ul class="list-group" id="listTodo">
+                            <!-- <li class="list-group-item justify-content-between d-flex bg-light"><strong>HTML</strong>
+                            <div>
+                                <button type="button" onclick="onEdit(this)" class="btn btn-sm btn-outline-info"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                <button type="button" onclick="onDelete(this)" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i> Delete</button>
+                            </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border text-info" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
